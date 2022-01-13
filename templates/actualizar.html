@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/actualizar/{{jugador.0}}" method="post">
+    <input name="Nombre" placeholder="Nombre" type="text" value="{{jugador.1}}"/>
+    <input name="Telefono" placeholder="Telefono" type="number" value="{{jugador.2}}"/>
+    <input name="dinero" placeholder="Saldo" type="number" value="{{jugador.3}}"/>
+
+    <button name="" type="submit">
+        Actualizar
+    </button>
+</form>
+{% endblock %}

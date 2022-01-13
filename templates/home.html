@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table border="" style="margin: auto;">
+    <tr>
+        <td style="width:50%">
+            <table border="" id="jugadores" style="margin: auto;padding: 0;" class="table">
+                {% for j in jugador %}
+
+                {% if j.3 != '0' %}
+                
+                <tr>
+                    <td>
+                        {{j.1}}
+                    </td>
+                    <td>
+                        <center>
+                            Apuesta
+                        </center>
+                        
+                        
+                                   
+                                    <select id="numero" name={{j.0}} >
+                                    {% for i in range(0,100)%}
+                                    
+                                        <option value={{i}}>{{i}}</option>
+                                    
+                                    {% endfor%}
+                                    </select> 
+                                
+                                    <input type="number" placeholder="Valor Apuesta" id={{j.0}} name="apuesta">
+                                
+                    </td>
+                </tr>
+                {% endif %}
+                
+                {% endfor %}
+                
+            </table>
+        </td>
+        <td>
+            
+            <img alt="" src="{{ url_for('static', filename='img/ruleta.png')}} " id="ruleta" style="transition: all 4.5s ease-in-out"/>
+            <div id="sonido" style="display: none;">
+      <iframe  id="audio"></iframe>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+   
+/*$('#jugadores').find('tr').click( function(){
+//alert('You clicked row '+ ($(this).index()+1) );
+});*/
+    var rotated = false;
+    var nuevo=0;
+document.getElementById('ruleta').addEventListener('click', girar); 
+function girar() {
+    var div = document.getElementById('ruleta'),
+        deg = Math.random()*(7200)/3*2 ;
+        while(Math.abs(deg-nuevo)<1000){
+            deg = Math.random()*(7200)/3*2 ;
+        }
+        nuevo=deg;
+        numero=(Math.trunc((deg%360)/3.6));
+        console.log(numero);
+    div.style.transform       = 'rotate('+deg+'deg)'; 
+    rotated = !rotated;
+    var sonido = document.querySelector('#audio');
+    sonido.setAttribute('src', '../static/sonido/ruleta.mp3');
+
+         /*for (i=1; i<=document.getElementById("jugadores").rows.length; i++){
+              // alert($('#jugadores').find('tr').index()+1);
+        }*/
+    setTimeout(function() {
+     $("#jugadores tr").each(function(){
+        let eleccion =$(this).find('input[type="number"]').val();
+        let eleccion2 =$(this).find('select').val();
+        let id=$(this).find('select').attr('name');
+
+        if(numero==eleccion2){
+            window.location.href+="jugar/"+id;
+            
+        }
+        else {
+            window.location.href+="jugar/1";
+        }
+     
+     
+     
+     });
+ }, 5000);
+    
+}
+  
+    
+</script>
+{% endblock %}

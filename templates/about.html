@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="padding:2% 10% 2% 10%">
+	
+<center>
+	<h1>Juego de la Ruleta</h1>
+</center>
+<br>	
+
+<p>
+	Este es un sistema de simulación de un juego de ruleta donde un administrador pone los valores que un jugador apostaria, con las siguientes condiciones:
+	<br>
+	<ul>
+	<li>El jugador solo puede apostar por un número. </li>
+	<li>El jugador solo puede apostar entre el 8% y el 15% del total del dinero. </li>
+	<li>Si el jugador tienes solo $1.000 o menos, la apuesta debe ir a restos de ese jugador (debe apostar todo). </li>
+	<li>El administrador puede crear eliminar y editar jugadores.</li></ul>
+
+</p>
+<h3>Instrucciones</h3>
+<ul>
+	<li>La ruleta tiene 100 números que inician en el 0 y terminan en el 99</li>
+	<li>Los números pares son color Rojo, los números impares son de color negro pero los números 0 y 50 son de color verde</li>
+	<li>
+		Todos los jugadores que deseen apostar deben especificar el número y el valor a apostar
+	</li>
+	<li>Jugador que no desee apostar debe especificar en el campo de apuesta un dinero igual a cero.</li>
+	<li>Una vez que todas las apuestas esten hechas, se debe dar click en la imagen de la ruleta para comenzar el juego.</li>
+	<li>Un jugador gana si le cae el número seleccionado.</li>
+	<li>El jugador gana el doble de lo apostado si acierta su apuesta por cualquier numero exceptuando el 0 y el 50, si acierta en el 0 o el 50 recibe 15 veces lo apostado, si no acierta, el jugador pierde lo apostado.</li>
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>    
+<form action="/add_jugador" method="post">
+    <input name="Nombre" placeholder="Nombre" type="text">
+        <input name="Telefono" placeholder="Telefono" type="number">
+            <button name="" type="submit">
+                Guardar
+            </button>
+        </input>
+    </input>
+</form>
+</center>
+<br>    
+<table border="" style="margin: auto; width: 50%;" class="table">
+    <thead class="thead-dark" style="background-color:black; color:white"> 
+        <tr>    
+            <td>Nombre</td>
+            <td>Teléfono</td>
+            <td>Saldo</td>
+            <td>Administrar</td>
+        </tr>
+    </thead>
+    <tbody> 
+        {% for i in jugador %}
+        <tr>
+            <td>{{i.1}}</td>
+            <td>{{i.2}}</td>
+            <td>{{i.3}}</td>
+            <td>
+                <a href="/edit/{{i.0}}">Editar</a>
+                <a href="/eliminar/{{i.0}}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>    
+</table>
+{% endblock %}
