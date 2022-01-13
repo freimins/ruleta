@@ -46,6 +46,7 @@
         </td>
     </tr>
 </table>
+<h1 id="resu" ></h1>
 <script type="text/javascript">
    
 /*$('#jugadores').find('tr').click( function(){
@@ -78,11 +79,11 @@ function girar() {
         let id=$(this).find('select').attr('name');
 
         if(numero==eleccion2){
-            window.location.href+="jugar/"+id;
+            window.location.href+="jugar/"+id,numero;
             
         }
         else {
-            window.location.href+="jugar/1";
+            window.location.href+="jugar/0,"+numero;
         }
      
      
