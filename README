@@ -1,0 +1,37 @@
+# Ruleta Freiman
+
+Esta aplicación es un simulador de un juego de ruleta de un casino en el que se puede administrar jugadores y las apuestas para cada jugador
+
+## Comenzando 🚀
+
+Para tener una copia local de este proyecto debe clonar o descargar el repositorio de github que se encuentra en la dirección 
+
+
+### Pre-requisitos 📋
+
+Para ejecutar la aplicacion debe tener intalado en su sistema python3 en mi caso tengo python version 3.9.9, ademas pip, flask y mysql
+
+### Instalación 🔧
+Para installar flask basta con entrar a la consola del sistema e instalarlo por medio de pip con el comando pip install flask
+
+
+
+## Construido con 🛠️
+
+
+* sublime text3 - Editor
+* xampp - servidor local
+* github - repositorio
+
+## Alcances 🖇️
+
+En el proyecto he logrado realizar todo el manejo de los usuarios completo con ingreso, edición y eliminación de cada uno, ademas de la simulación y generación de los resultados del juego teniendo en cuenta las probabilidades
+
+En el momento le falta realizar los cambios en la base de datos cada que una ronda del juego se ejecuta
+
+## Autores ✒️
+
+
+
+* **Freiman Stiven Martinez Quintana** 
+
