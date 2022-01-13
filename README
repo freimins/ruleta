@@ -29,9 +29,9 @@ En el proyecto he logrado realizar todo el manejo de los usuarios completo con i
 
 En el momento le falta realizar los cambios en la base de datos cada que una ronda del juego se ejecuta
 
+El sistema está limitado a 5 jugadores dado a que he usado una herramienta gratuita de mysql, por ser gratis solo permite 5 registros
+
 ## Autores ✒️
-
-
 
 * **Freiman Stiven Martinez Quintana** 
 
